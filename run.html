@@ -14,12 +14,38 @@
         
 
 <h2>hey, this should have an input field under it</h2>
-        <input type="text" size="5000" onkeydown="myFunction(event)"> 
+        <input id="noteBox" type="text" size="5000" onkeydown="myFunction(event)"> 
 
         <script language="javascript">
 
 function myFunction(event) {
     var x = event.keyCode;
+    switch(x) {
+        case 49:
+            textValue = 'C';
+            break;
+        case 50:
+            textValue = 'D';
+            break;
+        case 51:
+            textValue = 'E';
+            break;
+        case 52:
+            textValue = 'F';
+            break;
+        case 53:
+            textValue = 'G';
+            break;
+        case 54:
+            textValue = 'A';
+            break;
+        case 55:
+            textValue = 'B';
+            break;
+        default:
+            textValue = ' ';
+    }
+    document.getElementById("noteBox").value = textValue;
 
     //plays 4 part harmonies
     // if (x == 49) {  // 27 is the ESC key
