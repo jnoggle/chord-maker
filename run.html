@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head><title> AudioSynth </title></head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="chord.css">
+        <title> AudioSynth </title></head>
     <body>
         <script src='audiosynth.js'></script>
         <script src='play.js'></script>
@@ -8,5 +10,70 @@
         <button onClick="playDMinor()">Play D Minor</button>
         <button onclick="playEMinor()">Play E Minor</button>
         <button onclick="playFMajor()">Play F Major</button>
+        
+        
+
+<h2>hey, this should have an input field under it</h2>
+        <input type="text" size="5000" onkeydown="myFunction(event)"> 
+
+        <script language="javascript">
+
+function myFunction(event) {
+    var x = event.keyCode;
+
+    //plays 4 part harmonies
+    // if (x == 49) {  // 27 is the ESC key
+    //     playCMajor7();
+    // }
+    // if (x==50)
+    // {playDMinor7();}
+    // if (x==51)
+    // {playEMinor7();}
+    // if (x==52)
+    // {playFMajor7();}
+    //  if (x==53)
+    // {playGMajor7();}
+    //  if (x==54)
+    // {playAMinor7();}
+    // if (x==55)
+    // {playBDim7();}
+
+
+/////plays single notes 1-7
+    if (x == 49) {  
+        playC();
+    }
+    if (x==50)
+    {playD();}
+    if (x==51)
+    {playE();}
+    if (x==52)
+    {playF();}
+     if (x==53)
+    {playG();}
+     if (x==54)
+    {playA();}
+    if (x==55)
+    {playB();}
+}
+
+
+function createButton(context, func){
+    var button = document.createElement("input");
+    button.type = "button";
+    button.value = "Submit Chord!";
+    button.onclick = func;
+    context.appendChild(button);
+}
+
+window.onload = function(){
+    createButton(document.body, function(){
+        highlight(this.parentNode.childNodes[1]);
+        button.onclick = playFMajor();
+        // Example of different context, copied function etc
+        // createButton(this.parentNode, this.onclick);
+    });
+}
+        </script>
     </body>
 </html>
