@@ -10,41 +10,28 @@
         <button onClick="playDMinor()">Play D Minor</button>
         <button onclick="playEMinor()">Play E Minor</button>
         <button onclick="playFMajor()">Play F Major</button>
+        <button onClick="playGMajor()">Play G Major</button>
+        <button onclick="playAMinor()">Play A Minor</button>
+        <button onclick="playBDim()">Play B Diminished</button>
+        <br>
+        <button onClick="playCMajor7()">Play C7 Major</button>
+        <button onClick="playDMinor7()">Play D7 Minor</button>
+        <button onclick="playEMinor7()">Play E7 Minor</button>
+        <button onclick="playFMajor7()">Play F7 Major</button>
+        <button onClick="playGMajor7()">Play G7 Major</button>
+        <button onclick="playAMinor7()">Play A7 Minor</button>
+        <button onclick="playBDim7()">Play B7 Diminished</button>
         
+        
+
 <h1>In the text box below, type 1-7 to generate C-B</h1>
 <h2>Try building a chord by pressing 1, 3, and 5! </h2>
-        <input id="noteBox" type="text" size="5000" onkeydown="myFunction(event)"> 
+        <input type="text" size="5000" onkeydown="myFunction(event)"> 
 
         <script language="javascript">
 
 function myFunction(event) {
     var x = event.keyCode;
-    switch(x) {
-        case 49:
-            textValue = 'C';
-            break;
-        case 50:
-            textValue = 'D';
-            break;
-        case 51:
-            textValue = 'E';
-            break;
-        case 52:
-            textValue = 'F';
-            break;
-        case 53:
-            textValue = 'G';
-            break;
-        case 54:
-            textValue = 'A';
-            break;
-        case 55:
-            textValue = 'B';
-            break;
-        default:
-            textValue = ' ';
-    }
-    document.getElementById("noteBox").value = textValue;
 
     //plays 4 part harmonies
     // if (x == 49) {  // 27 is the ESC key
@@ -100,6 +87,17 @@ window.onload = function(){
     });
 }
         </script>
+        <h1>Cheat Sheet</h1>
+
+        <p>
+            C = 1 3 5 (C E G)<br>
+            Dm = 2 4 6 (D F A)<br>
+            Em = 3 5 7 (E G B)<br>
+            F = 4 6 1 (F A C)<br>
+            G = 5 7 2 (G B D)<br>
+            Am = 6 1 3 (A C E)<br>
+            Bdim = 7 2 4 (B D F)<br>
+        </p>
         <h1>How Chords Work</h1>
         <h2>
             What's a chord?
